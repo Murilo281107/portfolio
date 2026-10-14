@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio</title>
+  <meta name="description" content="Portfólio profissional" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#sobre" class="logo" id="logo"></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <nav id="nav" class="nav">
+        <a href="#sobre" data-i18n="nav_about"></a>
+        <a href="#projetos" data-i18n="nav_projects"></a>
+        <a href="#experiencias" data-i18n="nav_experience"></a>
+        <a href="#contato" data-i18n="nav_contact"></a>
+        <button id="langBtn" class="lang-btn" aria-label="Language">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre" class="section hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n="hello"></p>
+          <h1 id="heroName"></h1>
+          <h2 id="heroRole"></h2>
+          <p id="aboutText" class="lead"></p>
+          <div id="skills" class="chips"></div>
+          <a href="#contato" class="btn" data-i18n="cta"></a>
+        </div>
+        <div class="avatar" id="avatar"></div>
+      </div>
+      <div class="container facts" id="facts"></div>
+    </section>
+
+    <section id="projetos" class="section alt">
+      <div class="container">
+        <h2 class="title" data-i18n="nav_projects"></h2>
+        <div id="timeline" class="timeline"></div>
+      </div>
+    </section>
+
+    <section id="experiencias" class="section">
+      <div class="container">
+        <h2 class="title" data-i18n="nav_experience"></h2>
+        <div id="experiences" class="cards"></div>
+      </div>
+    </section>
+
+    <section id="contato" class="section alt">
+      <div class="container">
+        <h2 class="title" data-i18n="nav_contact"></h2>
+        <div class="contact-grid">
+          <div id="contactIcons" class="icons"></div>
+          <form id="contactForm" novalidate>
+            <label><span data-i18n="f_name"></span>
+              <input type="text" name="name" required minlength="2" /></label>
+            <label><span data-i18n="f_email"></span>
+              <input type="email" name="email" required /></label>
+            <label><span data-i18n="f_message"></span>
+              <textarea name="message" rows="5" required minlength="10"></textarea></label>
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <button type="submit" class="btn" data-i18n="f_send"></button>
+            <p id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><span id="footerText"></span></div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
